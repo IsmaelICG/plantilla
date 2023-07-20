@@ -1,11 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { HashRouter } from "react-router-dom";
+import { AppRoutes } from "./routes/app.routes.tsx";
+import { Provider } from "./contexts/App.context.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-<BrowserRouter>
-    <App />
-</BrowserRouter>
-)
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+<Provider>
+
+  <HashRouter>
+    <AppRoutes />
+  </HashRouter>
+
+  </Provider>
+);

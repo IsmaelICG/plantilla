@@ -11,6 +11,9 @@ const [hasError, sethasError] = useState(false);
 const [isFetching, setIsFetching] = useState(false);
 
 const fetchData = async (e?: React.FormEvent<HTMLFormElement>) => {
+
+    e?.preventDefault();
+
     try {
         const response = await fetch (url);
         const dataBuffer = await response.json();

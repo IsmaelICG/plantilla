@@ -4,7 +4,7 @@ export const useForm = <T>(initialData: T) => {
 
     const[formData, setFormData] = useState<T>(initialData);
 
-    const onChange = (e: React.ChangeEvent<HTMLImputElement>) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value,
@@ -18,7 +18,7 @@ export const useForm = <T>(initialData: T) => {
     return {
         formData,
         onChange,
-        resetForm
+        resetForm,
     }
 }
 
